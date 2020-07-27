@@ -92,7 +92,7 @@ class Registro2 extends Generico2 {
                         . str_pad(strftime("%y", strtotime($this->data_emissao)), 2, 0, STR_PAD_LEFT)
                         . 2
                         . str_pad($this->data['nosso_numero'], 5, 0, STR_PAD_LEFT), 7);
-        return strftime("%y", strtotime($this->data_emissao)) . 2 . str_pad($this->data['nosso_numero'], 5, 0, STR_PAD_LEFT) . $modulo11['digito'];
+        return strftime("%y", strtotime($this->entryData['data_emissao'])) . $this->entryData['seu_byte'] . str_pad($this->data['nosso_numero'], 5, 0, STR_PAD_LEFT) . $modulo11['digito'];
     }
 
     protected static function modulo11($num, $base = 9) {
