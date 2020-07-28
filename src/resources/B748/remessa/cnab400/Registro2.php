@@ -45,9 +45,10 @@ class Registro2 extends Generico2 {
             'required' => false),
         'seu_numero' => array(
             'tamanho' => 10,
-            'default' => ' ',
+            'default' => '0000000000',
             'tipo' => 'alfa',
-            'required' => false),
+            'required' => false
+        ),
         'filler' => array(
             'tamanho' => 43,
             'default' => ' ',
